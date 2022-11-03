@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+}
+
+body {
+  background-color: #1f1f1f;
+}
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 10rem;
+}
+
+#addNewTask {
+  background: white;
+  width: 25rem;
+  height: 3rem;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+#addNewTaskButton,
+.deleteTaskButton,
+.editButton {
+  color: white;
+  background-color: #1f1f1f;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#inputTextArea {
+  border: 1px solid #1f1f1f;
+  padding: 5px 15px;
+  border-radius: 4px;
+}
+
+.error {
+  border: 1px solid red !important;
+}
+
+.error::placeholder {
+  color: red;
+}
+#taskContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-width: 30rem;
+  max-width: 35rem;
+}
+.taskitem {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+  min-height: 3rem;
+  border-radius: 4px;
+  background: white;
+}
+
+.finished {
+  background: green !important;
+}
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.paragraph {
+  overflow-wrap: anywhere;
+}
+
+.buttocontainer {
+  display: flex;
+  gap: 5px;
+  flex-direction: row;
+}
