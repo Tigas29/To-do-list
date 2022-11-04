@@ -8,9 +8,8 @@ const addTask = () => {
   if (!inputIsValid) {
     return textAreaTask.classList.add("error");
   }
-
+  // div container
   const creatingTask = document.createElement("div");
-  // giving a class in div
   creatingTask.classList = "taskitem";
 
   const paragraph = document.createElement("p");
@@ -38,6 +37,7 @@ const addTask = () => {
   taskContainer.appendChild(creatingTask);
 
   textAreaTask.value = "";
+
   creatingTask.addEventListener("dblclick", () => taskIsFinished(paragraph));
   deleteButton.addEventListener("click", () => remove(creatingTask, paragraph));
   editButton.addEventListener("click", () => editTask(paragraph));
@@ -64,7 +64,10 @@ function editTask(paragraph) {
     if (currentTaskIsBeingClicked) {
       const input = prompt("Digite sua nova tarefa");
       const newText = input;
-      paragraph.innerText = newText;
+
+      newText.trim() <= 0
+        ? (paragraph.innerText = paragraph.innerText)
+        : (paragraph.innerText = newText);
     }
   }
 }
